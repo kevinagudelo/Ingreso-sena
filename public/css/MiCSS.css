@@ -1,0 +1,232 @@
+
+body {
+
+
+  /*  background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% ;*/
+  font-family: 'Russo One', sans-serif;
+}
+.login {
+
+  padding-top: 100px;
+}
+
+.sing-out {
+  color: brown ;
+  margin: 20px
+}
+.name-user {
+  margin: 20px; margin-top: 40px;
+  color:white
+}
+.icon-user {
+  color: green;
+  margin : 20px
+}
+.titulo-codigo {
+  text-align: center; padding-bottom: 40px;
+}
+.registros {
+  padding-top: 17%
+}
+#principal {
+  display: grid;
+  grid-template-columns: repeat(11,1fr);
+  grid-template-rows: repeat(11,1fr);
+
+}
+#login{
+  grid-column: 1 / span 12 ;
+  grid-row:3/span 9;
+}
+#sena{
+  margin-top: 20px;
+}
+#codigo{
+  grid-column: 1 / span 12 ;
+  grid-row:3/span 8;
+}
+#registrar{
+  grid-column: 1 / span 12 ;
+  grid-row:11/span 1;
+}
+#principal_equipos {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(12,1fr);
+
+}
+#cuerpo{
+  margin: 0;
+  width: 300px;
+  height: 400px;
+
+
+
+}
+#header{
+  grid-column: span 12 ;
+  grid-row:1/span 2;
+  background-color: black;
+  color: white;
+
+}
+#gestion{
+  grid-column: 1 / span 12 ;
+  grid-row:3/span 12;
+}
+
+
+#registro{
+
+  grid-column:1 /span 7;
+  grid-row: 3 /span 9;
+
+}
+#image{
+  grid-column:8 /span 12;
+  grid-row: 3 /span 12;
+
+}
+/* registro equipo  */
+#cargar_datos{
+
+  grid-column:1 /span 8;
+  grid-row: 3 /span 5;
+
+}
+#image_cargada{
+  grid-column:9 /span 12;
+  grid-row: 3 /span 5;
+
+}
+#equipo_datos{
+  grid-column:1 /span 12;
+  grid-row: 8 /span 5;
+  margin-top: 50px;
+}
+.datos-registro{
+  margin-top: 30px;
+}
+#startbutton {
+
+  margin-top:8px ;
+}
+#canvas {
+  width: 238px;
+  padding: 0px;
+  margin-top: 10px;
+  border: solid 2px currentColor  ;
+
+}
+#canvasCargada {
+  width: 238px;
+  height: 180px;
+  padding: 0px;
+  margin-top: 10px;
+  padding-top: 0px;
+  border: solid 2px  currentColor  ;
+
+}
+#video {
+  height: 180px;
+  width: 238px;
+  padding: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  border: solid 2px  currentColor  ;
+
+}
+#img_cargada {
+  border: solid 1px  currentColor ;
+  margin-top: 20px;
+  width: 245px;
+  height: 220px;
+}
+.datos_eq {
+  margin: 0px;
+  padding:0px;
+}
+.line1{
+  margin-left: 60px;
+}
+.offse{
+  margin-right: 40px;
+}
+/*ingreso*/
+#principal_equipos_ingreso {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(12,1fr);
+
+}
+#lectura_ingreso {
+  display: inline-block;
+  grid-column:1 /span 12;
+  grid-row: 3/span 2;
+  border-bottom: solid darkgray 1px;
+}
+#propietario {
+  grid-column:1 /span 12;
+  grid-row: 5/span 4;
+  border-bottom: solid darkgrey 1px;
+  height: 160px;
+
+}
+#img_cargada_ingreso{
+  margin-top: 10px;
+  border: solid  green 6px ;
+  width: 200px;
+  height: 140px;
+
+}
+#equipo_datos_ingreso {
+  grid-column:1 /span 12;
+  grid-row: 9/span 4;
+
+}
+/*
+Salida
+*/
+#header_salida {
+  grid-column:1 /span 12;
+  grid-row: 1/span 2;
+  background-color: black;
+
+}
+#principal_equipos_salida {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(12,1fr);
+
+
+}
+#datos_ingreso_user {
+  grid-column:1 /span 12;
+  grid-row: 3/span 3;
+  margin-top: 0px;
+  border-bottom: solid gray 1px;
+
+}
+#propietario_salida {
+  grid-column:1 /span 12;
+  grid-row: 6/span 3;
+  border-bottom: solid grey 2px;
+
+  height: 160px;
+
+}
+#img_cargada_ingreso{
+  margin-top: 10px;
+  border: solid grey ;
+  width: 200px;
+  height: 140px;
+
+}
+#equipo_datos_salida {
+  grid-column:1 /span 12;
+  grid-row: 9/span 3;
+
+
+}

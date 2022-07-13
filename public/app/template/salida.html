@@ -1,0 +1,78 @@
+<div class="container-fluid " id="principal_equipos_salida">
+  <div class="row " id="header">
+    <div class="col-sm-4">
+      <i  class=" fas fa-sign-out-alt fa-4x sing-out" ng-click="myFunc()" href="#" ></i>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center ">
+      <img  class=""src="img/logo SENA SIN FONDO blanco.png" alt="" style="width: 120px;height: 90px"/>
+    </div>
+    <div class=" col-sm-4 d-flex justify-content-end">
+      <h4 class="name-user  "  >{{name}}</h4>
+      <i ui-sref="gestion" class=" fas fa-user-circle fa-4x icon-user" ></i>
+    </div>
+  </div>
+  <div id="datos_ingreso_user">
+    <form  >
+      <div class="form-group row">
+        <label class=" offset-1 col-sm-3 "style="margin-top: 60px" ><h5>{{personaje}}</h5></label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control " style="margin-top: 60px" id="date" ng-model="hentrada" disabled="true" >
+        </div>
+
+        <img id="img_cargada_ingreso" class="offset-1" ng-src="{{canvas2}}">
+        <div>
+          <button ng-click="SalidaIngreso()" class="btn btn-danger" style="margin-top:60px; margin-left: 20px"> SALIR </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="propietario_salida">
+    <div class="row">
+      <label for="user" class=" offset-1 col-sm-1 " style="margin-top: 60px"><h5>Propietario</h5></label>
+      <div class="col-sm-4" style="margin-top: 60px">
+        <input type="text" class="form-control " ng-model="propietario" placeholder="Propietario">
+      </div>
+      <img id="img_cargada_ingreso" class="offset-2" ng-src="{{canvas}}">
+      <div>
+        <button ng-click="SalidaPropietario()" class="btn btn-warning" style="margin-top:60px; margin-left: 20px"> SALIR </button>
+      </div>
+    </div>
+  </div>
+  <div id="equipo_datos_salida">
+    <form ng-submit="registro_equipo()" class="" >
+      <div class="form-group row line1">
+        <label for="documento" class="  col-sm-1   "><h5>Codigo</h5></label>
+        <div class="col-sm-3  ">
+          <input type="text" class="form-control offset-1 " id="documento" ng-model="codigo" placeholder="Codigo">
+        </div>
+        <label for="documento" class="  col-sm-1 offset-2 "><h5>Dispositivo</h5></label>
+        <div class="col-sm-3  ">
+          <input type="text" class="form-control offset-1 " id="documento" ng-model="dispositivo" placeholder="Dispositivos">
+        </div>
+
+      </div>
+      <div class="form-group row line1">
+        <label for="documento" class="  col-sm-1   "><h5>Marca</h5></label>
+        <div class="col-sm-3  ">
+          <input type="text" class="form-control offset-1 " id="documento" ng-model="marca" placeholder="Marca">
+        </div>
+        <label for="documento" class="  col-sm-1 offset-2 "><h5>Serie</h5></label>
+        <div class="col-sm-3  ">
+          <input type="text" class="form-control offset-1 " id="documento" ng-model="serie" placeholder="No Serie">
+        </div>
+
+      </div>
+      <div class="form-group row line1">
+        <div class="form-check col-sm-1">
+          <label class="form-check-label" for="exampleCheck1"><h5>Cargador</h5></label>
+        </div>
+        <div class="col-sm-3  ">
+          <input type="text" class="form-control offset-1 " id="documento" ng-model="cargador" placeholder="Cargador">
+        </div>
+        <div class="col-sm3 offset-2">
+          <button ui-sref="dashboard" class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

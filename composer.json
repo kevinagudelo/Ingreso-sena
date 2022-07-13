@@ -1,0 +1,11 @@
+{
+  "require": {
+    "sena/zoe.se": "^0.0.4",
+    "sena/nogal.se": "^0.0.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "IngresoSENA\\": ".//"
+    }
+  }
+}

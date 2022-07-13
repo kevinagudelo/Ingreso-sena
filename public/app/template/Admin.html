@@ -1,0 +1,176 @@
+
+<div class="container-fluid">
+    <div class="row justify-content-between " id="header1">
+        <div class="col-4">
+            <i  class="fas fa-sign-out-alt fa-4x sing-out" ng-click="myFunc()" href="#" ></i>
+        </div>
+        <div class="d-flex col-4 justify-content-center align-items-center">
+            <img class="" src="img/logoSENASINFONDOblanco.png" alt="" style="width: 120px; height: 90px;"/>
+        </div>
+        <div class="d-flex col-4 justify-content-end">
+            <h3 class="name-user text-white"> Kevin Muñoz</h3>
+            <i class="fas fa-user-circle fa-4x icon-user"></i>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="d-flex justify-content-between pt-4 pb-2">
+            <div class="d-flex">
+                <form class="input-group"y>
+                    <input ng-model="filtro" type="text" class="form-control"  placeholder="Doc. Propietario" onkeypress="return justNumbers(event);" value="1" >
+                    <div class="input-group-append">
+                        <span class="input-group-text">Filtrar</span>
+                    </div>
+                </form>
+                <form  class="input-group ml-5">
+                    <input ng-model="data" ng-change="filtrarfecha()" type="date" class="form-control">
+                    <div class="input-group-append">
+                        <span ng-show="filter" class="input-group-text">Filtrar</span>
+                        <span ng-show="reload" ng-click="reloadRoute()" class="btn btn-success">Atras</span>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="">
+                <a ui-sref="CrearUsuario" class="btn btn-success text-white">Crear Usuario</a>
+            </div>
+        </div>
+    </div>
+    <div class="tabla">
+        <table  id="tabla" class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th>
+                        Codigo Equipo
+                    </th>
+                    <th>
+                        Doc. Propietario
+                    </th>
+                    <th>
+                        Nombre Ingreso
+                    </th>
+                    <th>
+                        Nombre Salida
+                    </th>
+                    <th>
+                        Guardia Entrada
+                    </th>
+                    <th>
+                        Guardia Salida
+                    </th>
+                    <th>
+                        Fecha Entrada
+                    </th>
+                    <th>
+                        Fecha Salida
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in listado| filter:filtro">
+                    <td>{{item.codigo}}</td>
+                    <td>{{item.documento}}</td>
+                    <td ng-click="mdlIngreso(item.aprendiz_id_entra)"><a class="text-dark xd"  data-toggle="modal" data-target="#ModalEntrada">{{item.quien_entra}}</a></td>
+                    <td ng-click="mdlSalida(item.aprendiz_id_salida)"><a class="text-dark xd"  data-toggle="modal" data-target="#ModalSalida">{{item.quien_sale}}<a></td>
+                                <td>{{item.guardia_entra}}</td>
+                                <td>{{item.guardia_sale}}</td>
+                                <td>{{item.entrada.replace(" ", "T") | date:"dd/MM/yyyy, h:mma"}}</td>
+                                <td>{{item.salida.replace(" ", "T") | date:"dd/MM/yyyy, h:mma"}}</td>
+                                </tr>
+                                </tbody>
+                                </table>
+
+                                </div>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="ModalEntrada" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Informacion</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="">
+                                                    <div class="d-flex">
+                                                        <div class="col-6 pl-0">
+                                                            <div>
+                                                                <lavel>Nombre</lavel>
+                                                                <input type="text" class="form-control" placeholder="{{nombre}}" disabled="">
+                                                            </div>
+                                                            <div>
+                                                                <lavel>ficha</lavel>
+                                                                <input type="text" class="form-control" placeholder="{{ficha}}" disabled="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div>
+                                                        <lavel>documento</lavel>
+                                                        <input type="text" class="form-control" placeholder="{{documento}}" disabled="">
+                                                    </div>
+                                                    <div>
+                                                        <lavel>Formacion</lavel>
+                                                        <input type="text" class="form-control" placeholder="{{formacion}}" disabled="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal2 -->
+                                <div class="modal fade" id="ModalSalida" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Informacion</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="">
+                                                    <div class="d-flex">
+                                                        <div class="col-6 pl-0">
+                                                            <div>
+                                                                <lavel>Nombre</lavel>
+                                                                <input type="text" class="form-control" placeholder="{{nombreS}}" disabled="">
+                                                            </div>
+                                                            <div>
+                                                                <lavel>ficha</lavel>
+                                                                <input type="text" class="form-control" placeholder="{{fichaS}}" disabled="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <img ng-src="{{fotoS}}">
+                                                        </div>
+
+                                                    </div>
+                                                    <div>
+                                                        <lavel>documento</lavel>
+                                                        <input type="text" class="form-control" placeholder="{{documentoS}}" disabled="">
+                                                    </div>
+                                                    <div>
+                                                        <lavel>Formacion</lavel>
+                                                        <input type="text" class="form-control" placeholder="{{formacionS}}" disabled="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+

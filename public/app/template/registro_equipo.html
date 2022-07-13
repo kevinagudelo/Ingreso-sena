@@ -1,0 +1,119 @@
+<div class="container-fluid " id="principal_equipos">
+  <div class="row " id="header">
+    <div class="col-sm-4">
+      <i  class=" fas fa-sign-out-alt fa-4x sing-out" ng-click="myFunc()" href="#" ></i>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center ">
+      <img  class=""src="img/logo SENA SIN FONDO blanco.png" alt="" style="width: 120px;height: 90px"/>
+    </div>
+    <div class=" col-sm-4 d-flex justify-content-end">
+      <h4 class="name-user  "  >{{name}}</h4>
+      <i ui-sref="gestion" class=" fas fa-user-circle fa-4x icon-user" ></i>
+    </div>
+  </div>
+  <div class="  " id="cargar_datos">
+    <form ng-submit="cargar_datos()" class="datos-registro">
+      <div class="form-group row">
+        <label for="user" class=" offset-1 col-sm-3 "><h5>Documento</h5></label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control " id="user" ng-model="datos.documento"required="true" placeholder="No Documento">
+        </div>
+        <button  type="submit"class="btn btn-success col-1">OK</button>
+      </div>
+    </form>
+    <div class="form-group row" style="margin-top: 30px">
+      <label for="propietario" class="col-sm-3 offset-1 col-form-label"><h5>Propietario</h5></label>
+      <div class="col-sm-6">
+        <input type="text" ng-model="Inputpropietario" class="form-control" placeholder="Propietario" >
+      </div>
+    </div>
+    <div class="form-group row" style="margin-top: 30px">
+      <label for="carnet_propietario" class="col-sm-3 offset-1 col-form-label"><h5>Carnet Propietario</h5></label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" ng-model="carnetUsuario" id="carnet_propietario" placeholder="Carnet">
+      </div>
+    </div>
+  </div>
+  <div id="image_cargada">
+    <img id="img_cargada" ng-src="{{canvas}}">
+    <!--    <canvas class="col-sm-6 offset-3 " ng-model="canvas" id="img_cargada"></canvas>-->
+  </div>
+  <div id="equipo_datos">
+    <form ng-submit="registro_equipo()" class="datos_eq" >
+      <div class="form-group row line1">
+        <label for="documento" class="  col-sm-1   "><h5>Codigo</h5></label>
+        <div class="col-sm-3  ">
+          <input type="text" class="form-control offset-1 "ng-model="equipo.codigo" placeholder="Codigo" required="true">
+        </div>
+        <label for="documento" class="  col-sm-1 offset-2 " required="true"><h5>Dispositivo</h5></label>
+        <select   ng-model="equipo.dispositivo" class="form-control col-sm-2 offset-1">
+          <option class="form-control " value="" >Seleccione una opcion</option>
+          <option class="form-control " selected value="1">COMPUTADOR</option>
+          <option class="form-control " value="2">TABLET</option>
+          <option class="form-control " value="3">TALADRO</option>
+          <option class="form-control " value="4">IMPRESORA</option>
+        </select>
+
+      </div>
+      <div class="form-group row line1">
+        <label for="documento" class="  col-sm-1 " requiered="true"><h5>Marca</h5></label>
+        <select   ng-model="equipo.marca" class="form-control col-sm-2 offset-1">
+          <option class="form-control " value="" >Seleccione una opcion</option>
+          <option class="form-control " selected value="ASUS">ASUS  </option>
+          <option class="form-control " value="TOSHIBA">TOSHIBA</option>
+          <option class="form-control " value="SONY">SONY</option>
+          <option class="form-control " value="APPLE">APPLE</option>
+          <option class="form-control " value="DELL">DELL</option>
+          <option class="form-control " value="LENOVO">LENOVO</option>
+          <option class="form-control " value="ACER">ACER</option>
+          <option class="form-control " value="HP">HP</option>
+          <option class="form-control " value="COMPAQ">COMPAQ</option>
+          <option class="form-control " value="PC-SMART">PC-SMART</option>
+          <option class="form-control " value="SAMSUNG">SAMSUNG</option>
+          <option class="form-control " value="IBM">IBM</option>
+          <option class="form-control " value="FUJITSU">FUJITSU</option>
+          <option class="form-control " value="EPSON">CANON</option>
+          <option class="form-control " value="ALIENWARE">ALIENWARE</option>
+          <option class="form-control " value="OTRA">OTRA</option>
+
+        </select>
+        <label for="documento" class="  col-sm-1 offset-2 "><h5>Serie</h5></label>
+        <div class="col-sm-3  ">
+          <input type="text" class="form-control offset-1 " ng-model="equipo.serie"  placeholder="Nº Serie" required="true">
+        </div>
+
+      </div>
+      <div class="form-group row line1">
+        <label for="documento" class="  col-sm-1   "><h5>Cargador</h5></label>
+        <div class="col-sm-3  ">
+          <input type="text" class="form-control offset-1 " ng-model="equipo.cargador"  placeholder="Cargador" required="true">
+        </div>
+        <div class="offset-2">
+          <div  class=" " >
+            <button type="submit" class=" btn btn-success " >Enviar</button>
+            <a ui-sref="dashboard"   class="btn btn-danger offset-auto " >Cancelar</a>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel " style="color: red "> Alerta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>{{input}}</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+/*#principal1 {
+  display: grid;
+  grid-template-columns: 8vw 8vw 8vw  8vw  8vw  8vw 8vw 8vw 8vw  8vw  8vw  8vw;
+  grid-template-rows:  8vh 8vh  8vh  8vh  8vh 8vh 8vh  8vh  8vh  8vh  8vh 8vh ;
+
+}*/
+#header1{
+/*  grid-column: 1 / span 12 ;
+  grid-row:1/span 2;*/
+  background-color: black;
+/*  color: white;*/
+
+
+}
+.sing-out {
+  color: brown ;
+  margin: 20px
+}
+.name-user {
+  margin-top: 40px;
+
+}
+.icon-user {
+  color: green;
+  margin : 20px
+}
+/*#admin1{
+  grid-column: 1 / span 12 ;
+  grid-row:2/span 12;
+}*/
+.titulo-codigo {
+  text-align: center; padding-bottom: 40px;
+}
+
+/*#tabla1{
+  grid-column: 1 / span 12 ;
+  grid-row:5/span 4;
+}*/
+
+.tabla{
+    height: 68vh;
+    width: 97vw;
+    overflow: auto
+}
+
+.xd{cursor: pointer}
+
+.hide{
+    display: none;
+}

@@ -1,0 +1,53 @@
+<div class="container-fluid" id="principal">
+  <div class="row" id="header">
+    <div class="offset-5 col-2  aling-items-center d-flex justify-content-center" id="sena">
+      <img  class=""src="img/logo SENA SIN FONDO blanco.png" alt="" style="width: 120px;height: 90px"/>
+    </div>
+  </div>
+  <div id="login" >
+    <div class="offset-2 col-8 col-xl-4 offset-xl-4  cuerpo ">
+      <form ng-submit="login()" class="login">
+
+        <div >
+          <h2 style="text-align: center; padding-bottom: 40px;"  > INICIO DE SESIÓN </h2>
+        </div>
+        <div class="form-group row">
+          <label for="user" class="col-sm-3 col-form-label"><h5>Usuario:</h5></label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="user" ng-model="datos.user" placeholder="Usuario" required="true">
+          </div>
+        </div>
+        <div class="form-group row" style="margin-top: 40px">
+          <label for="inputPassword" class="col-sm-3 col-form-label"><h5>Contaseña:</h5></label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" id="inputPassword" ng-model="datos.password" placeholder="Contraseña" required="true">
+          </div>
+        </div>
+        <div style="padding-top: 20px" >
+          <button type="submit" class=" btn btn-success col-2 offset-5 " >Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div><!-- Button trigger modal -->
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel " style="color: red "> Alerta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>{{input}}</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

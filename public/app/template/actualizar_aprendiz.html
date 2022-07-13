@@ -1,0 +1,91 @@
+<div class="container-fluid " id="principal">
+  <div class="row " id="header">
+    <div class="col-sm-4">
+      <i  class=" fas fa-sign-out-alt fa-4x sing-out" ng-click="myFunc()" href="#" ></i>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center ">
+      <img  class=""src="img/logo SENA SIN FONDO blanco.png" alt="" style="width: 120px;height: 90px"/>
+    </div>
+    <div class=" col-sm-4 d-flex justify-content-end">
+      <h4 class="name-user  "  >{{name}}</h4>
+      <i ui-sref="gestion" class=" fas fa-user-circle fa-4x icon-user" ></i>
+    </div>
+  </div>
+  <div class="  " id="registro">
+    <form ng-submit="cargar_datos()" class="datos-registro">
+      <div class="form-group row">
+        <label for="user" class=" offset-1 col-sm-3 "><h5>Busqueda:</h5></label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control " id="user" ng-model="datos.documento"required="true" placeholder="CARNET O DOCUMENTO">
+        </div>
+        <button  type="submit"class="btn btn-success col-1">OK</button>
+      </div>
+    </form>
+    <form   class="datos-registro" ng-submit="ActualizarAprendiz()">
+      <div class="form-group row" style="margin-top: 15px">
+        <label for="user" class=" offset-1 col-sm-3 col-form-label"><h5>Nombre Completo:</h5></label>
+        <div class="col-sm-6">
+          <input required  pattern="[A-Za-z ]{6,100}" type="text" class="form-control text-uppercase "   id="user" ng-model="aprendiz.name" placeholder="Nombre" required="true"  title=" Solo Letras. Tamaño mínimo: 6. Tamaño máximo: 100">
+        </div>
+      </div>
+      <div class="form-group row" style="margin-top: 15px">
+        <label class="col-sm-3 offset-1 col-form-label"><h5>Documento :</h5></label>
+        <div class="col-sm-6">
+          <input type="text" ng-model="aprendiz.documento"  class="form-control text-uppercase"  placeholder="Documento">
+        </div>
+      </div>
+      <div class="form-group row" style="margin-top: 15px">
+        <label for="inputPassword" class="col-sm-3 offset-1 col-form-label"><h5>Carnet:</h5></label>
+        <div class="col-sm-6">
+          <input type="text" ng-model="aprendiz.carnet"  class="form-control text-uppercase"  placeholder="Carnet">
+        </div>
+      </div>
+      <div class="form-group row" style="margin-top: 15px">
+        <label class="col-sm-3 offset-1 col-form-label"><h5>Ficha:</h5></label>
+        <div class="col-sm-6">
+          <input ng-model="aprendiz.ficha"  type="text" class="form-control text-uppercase" placeholder="Ficha">
+        </div>
+      </div>
+      <div class="form-group row" style="margin-top: 15px">
+        <label class="col-sm-3 offset-1 col-form-label"><h5>Formacion:</h5></label>
+        <div class="col-sm-6">
+          <input ng-model="aprendiz.formacion"  type="text" class="form-control text-uppercase"  placeholder="Formacion">
+        </div>
+      </div>
+      <div class="row">
+        <div style="padding-top: 5px" class="col-1 offset-4 " >
+          <button type="submit"  class=" btn btn-success " >Actualizar</button>
+        </div>
+        <div style="padding-top: 5px" class="offset-1 col-2" >
+          <button ui-sref="dashboard"  type="submit" class=" btn btn-danger " >Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="image" style="padding-top: 30px">
+    <video class="col-sm-6 offset-3" id="video" allow="autoplay"></video>
+    <button ng-click="CargarImg()" class="btn btn-success offset-4 col-sm-4" id="startbutton">Capturar Imagen</button>
+    <canvas  ng-hide="capturaFoto" ng-model="aprendiz.foto" class="col-sm-6 offset-3" id="canvas"></canvas>
+    <img id="canvasCargada" ng-hide="cargarFoto" class="offset-3 col-sm-6" ng-src="{{aprendiz.foto}}">
+  </div>
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel " style="color: red "> Alerta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5>{{input}}</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

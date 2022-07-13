@@ -1,0 +1,81 @@
+<div class="container-fluid">
+    <div class="row justify-content-between " id="header1">
+        <div class="col-4">
+            <i  class="fas fa-sign-out-alt fa-4x sing-out"  ng-click="myFunc()"></i>
+        </div>
+        <div class="d-flex col-4 justify-content-center align-items-center">
+            <img class="" src="img/logoSENASINFONDOblanco.png" alt="" style="width: 120px; height: 90px;"/>
+        </div>
+        <div class="d-flex col-4 justify-content-end">
+            <h3 class="name-user text-white"> Kevin Muñoz</h3>
+            <i class="fas fa-user-circle fa-4x icon-user"></i>
+        </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center mt-3" style="height: 80vh">
+        <div class="col-6 ">
+            <form ng-submit="enviar()">
+                <div class="d-flex justify-content-between mb-2">
+                    <div class="col-5">
+                        <label for="inputUser" class=""><h5>Usuario:</h5></label>
+                    </div>
+                    <div class="col-7">
+                        <input ng-change="deleteError('usuario')" ng-model="nuevoUsuario.usuario" type="text" class="form-control" ng-class="{'is-invalid': errors.usuario}" id="usuario" placeholder="Usuario">
+                        <div class="invalid-feedback" ng-show="errors.usuario ">
+                            {{errors.usuario.message}}
+                        </div>
+                        <div class="text-danger" ng-show="minUsuario">
+                            EL usuario debe contener minimo 5 caracteres
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <div class="col-5">
+                        <label for="inputName" class=""><h5>Nombre:</h5></label>
+                    </div>
+                    <div class="col-7">
+                        <input ng-change="deleteError('nombre')" ng-model="nuevoUsuario.nombre" type="text" class="form-control" ng-class="{'is-invalid': errors.nombre}" id="validationServer02"placeholder="Nombre">
+                        <div class="invalid-feedback" ng-show="errors.nombre">
+                            {{errors.nombre.message}}
+                        </div>
+                        <div class="text-danger" ng-show="minNombre">
+                            El nombre debe contener minimo 5 caracteres
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <div class="col-5 ">
+                        <label for="inputVerifyPassword" class=""><h5>Contraseña:</h5></label>
+                    </div>
+                    <div class="col-7">
+                        <input ng-change="deleteError('contrasena1')" ng-model="nuevoUsuario.contrasena1" type="password" class="form-control" ng-class="{'is-invalid': errors.contrasena1}" id="validationServer03" placeholder="Contraseña">
+                        <div class="text-danger" ng-show="minContrasena">
+                            La contraseña Debe contener minimo 8 caracteres
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-4">
+                    <div class="col-5">
+                        <label for="inputPassword" class=""><h5>Verificar Contraseña:</h5></label>
+                    </div>
+                    <div class="col-7">
+                        <input ng-change="deleteError('contrasena2')" ng-model="nuevoUsuario.contrasena2" type="password" class="form-control" ng-class="{'is-invalid': errors.contrasena1}" id="validationServer04" placeholder="Verificar Contraseña">
+                    </div>
+                </div>
+                <div id="msgSuccess" class="d-flex justify-content-center mb-4" ng-show="success">
+                    <a class="text-success">Usuario creado con exito</a>
+                </div>
+                <div class="d-flex justify-content-center mb-4" ng-show="errors.contrasena1">
+                    <a class="text-danger">{{errors.contrasena1.message}}</a>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="mr-4">
+                        <button type="submit" class="btn btn-success text-white">Crear Usuario</button>
+                    </div>
+                    <div class="">
+                        <button ui-sref="Admin" type="submit" class="btn btn-danger text-white">Salir</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

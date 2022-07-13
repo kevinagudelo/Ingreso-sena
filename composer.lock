@@ -1,0 +1,120 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "cae56071a3bbdab84ae27c03fe250624",
+    "packages": [
+        {
+            "name": "sena/nogal.se",
+            "version": "0.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jalfcolombia/nogal.se.git",
+                "reference": "8904c75c7b1d42c87b6b23326e437562cd765470"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jalfcolombia/nogal.se/zipball/8904c75c7b1d42c87b6b23326e437562cd765470",
+                "reference": "8904c75c7b1d42c87b6b23326e437562cd765470",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NogalSE\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julian Andres Lasso Figueroa",
+                    "email": "jalasso69@misena.edu.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Nogal (Student Edition) - This is an ORM implementation in PHP7 based on DAO to be used in the learning environments of the National Learning Service - SENA in Colombia.",
+            "homepage": "https://jalfcolombia.github.io/nogal.se/",
+            "keywords": [
+                "CTA",
+                "PHP7",
+                "adsi",
+                "dao",
+                "database",
+                "jalf",
+                "jalfcolombia",
+                "lasso",
+                "nogal",
+                "nogalorm",
+                "orm",
+                "sena"
+            ],
+            "time": "2018-05-11T02:52:02+00:00"
+        },
+        {
+            "name": "sena/zoe.se",
+            "version": "0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jalfcolombia/zoe.se.git",
+                "reference": "b334433bc00fd289782ac42e9448aeb0d9376809"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jalfcolombia/zoe.se/zipball/b334433bc00fd289782ac42e9448aeb0d9376809",
+                "reference": "b334433bc00fd289782ac42e9448aeb0d9376809",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ZoeSE\\": "core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julian Andres Lasso Figueroa",
+                    "email": "jalasso69@misena.edu.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Zoe (Student Edition) - This is an implementation of MVC in PHP7 used in the learning environments of the National Learning Service - SENA in Colombia.",
+            "homepage": "https://jalfcolombia.github.io/zoe.se/",
+            "keywords": [
+                "CTA",
+                "PHP7",
+                "adsi",
+                "framework",
+                "jalf",
+                "jalfcolombia",
+                "lasso",
+                "mvc",
+                "sena",
+                "zoe"
+            ],
+            "time": "2018-05-11T05:00:47+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
